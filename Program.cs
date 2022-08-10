@@ -25,7 +25,8 @@ int sqrt1 = Convert.ToInt32(Math.Pow(number,2));
 Console.WriteLine("Число в квадрате:" + sqrt1);
 
 
-///////
+// метод Pow для вычисления значения, 
+// которое 2 возводит в степень в диапазоне от 0 до 32.
 int value = 2;
 for (int power = 0; power <= 32; power++)
    Console.WriteLine($"{value}^{power} = {(long)Math.Pow(value, power):N0} (0x{(long)Math.Pow(value, power):X})");
