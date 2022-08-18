@@ -154,3 +154,70 @@ Console.WriteLine(array[0]);
    );
    Console.WriteLine(max);
    
+/ // Задача 4.
+// Напишите программу, которая на вход принимает два числа и проверяет, 
+// является ли первое число квадратом второго
+
+Console.Write("Input 1 number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input 2 number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+if (num1 == num2 * num2)
+{
+    Console.Write("1 number is a square of 2 number");
+}
+else
+{
+    Console.Write("1 number is not a square of 2 number");
+}
+
+// Задача 5.
+// Напишите программу, которая будет выдавать название дня недели по заданному номеру
+
+ Console.Write("Input number of the day: ");
+
+ int day = Convert.ToInt32(Console.ReadLine());
+
+ if (day < 1 || day > 7)
+ {
+     Console.Write("Incorrect number");
+ }
+ else
+ {
+     if (day == 1)
+     {
+         Console.Write("Monday");
+     }
+     if (day == 2)
+     {
+         Console.Write("Tuesday");
+     }
+ }
+
+
+// Задача 6 
+// Напишите программу, которая на вход принимает одно число (N), 
+//а на выходе показывает все целые числа в промежутке от -N до N.
+
+ Console.Write("Введите число: ");
+ int N = Convert.ToInt32(Console.ReadLine());
+ int B = -N;
+ while (B <= N)
+ {
+     Console.Write(B + " ");
+     B++; // B = B + 1 аналогично B += 1 
+ }
+ // Например вводим число 5, на выходе получаем:
+ // -5,-4,-3,-2,-1,0,1,2,3,4,5
+
+
+// Задача 7
+// Напишите программу, которая принимает на вход трёхзначное число 
+//и на выходе показывает последнюю цифру этого числа.
+
+Console.Write("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int y = num % 10;
+
+Console.WriteLine(y);
+
