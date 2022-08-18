@@ -1,4 +1,5 @@
-﻿// Написать программу, которая на вход принимает число и выдаёт его квадрат.
+﻿// Задача 1.
+// Написать программу, которая на вход принимает число и выдаёт его квадрат.
 
 // Просим пользователя ввести число.
 // Console.Write("Введите число: ");
@@ -6,35 +7,49 @@
 // Создаём переменную number, 
 // тип данных который мы будем хранить в этой переменной int(целый тип чисел) 
 // и сохраняем значение, которое введёт пользователь при помощи :
-//Convert.Toint
+// Сonsole.ReadLine - сохраняем значение, которое введёт пользователь.
+// sqrt - переменная, в которую мы сохраняем возведение в квадрат
+// название может быть и другое. 
+ 
+
+Console.Write("Введите число:");
+int number = Convert.ToInt32(Console.ReadLine());
+int sqrt = number * number;
+Console.WriteLine("Число в квадрате:" + sqrt);
+
+//Вариант 2
 
 Console.Write("Введите число: ");
- int number = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
+number *= number;
+Console.WriteLine("Число в квадрате:" + number);
 
-// Дополнительные два способа возведения числа в квадрат
+// number *= number возведение в квадрат.
 
-// int sqrt = number * number;
-//Console.WriteLine("Число в квадрате:" + number);
-
-// number *= number;
+// Вариант 3
 
 // Maht.Pow возводит переменную в ту степень, которую мы укажем.
 // Math.Pow(number, 3 ) возведёт в третью степень (4 в четвертую) и т.д.
+
+Console.Write("Введите число:");
+int number = Convert.ToInt32(Console.ReadLine());
 int sqrt1 = Convert.ToInt32(Math.Pow(number,2));
 
 Console.WriteLine("Число в квадрате:" + sqrt1);
 
-
+// Задача 2.
+// Написать программу, которая двойку возводит в степень в диапазоне от 0 до 32.
 // метод Pow для вычисления значения, 
-// которое 2 возводит в степень в диапазоне от 0 до 32.
+
 int value = 2;
 for (int power = 0; power <= 32; power++)
    Console.WriteLine($"{value}^{power} = {(long)Math.Pow(value, power):N0} (0x{(long)Math.Pow(value, power):X})");
-//2*2 = 4
-//2*3 = 6 и т.д
+// Вывод в консоль: 2*2 = 4
+//                  2*3 = 6 и т.д
 
 
 
+// Задача 3.
 // Найти максимум из 9 чисел (вариант 1 )
 
 int a1 = 15;
@@ -65,6 +80,7 @@ if(c3 > max) max = c3;
 
 Console.WriteLine(max); 
 
+// Задача 3.
 // Найти максимум мз 9 чисел с помощью функций (вариант 2)
 
 // Возьмём функцию Мах и в качестве возвращаемого типа возьмём (int)
@@ -107,6 +123,7 @@ int Max(int arg1, int arg2, int arg3)
    //     Max = (a2,b2,c2),
    //     Max = (a3,b3,c3));
 
+// Задача 3.
 // Найти максимум мз 9 чисел с помощью массива (вариант 3)
 
 int Max (int arg1, int arg2, int arg3)
