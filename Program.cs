@@ -221,3 +221,105 @@ int y = num % 10;
 
 Console.WriteLine(y);
 
+
+//Задача 7 Вариант 2
+  // Написать программму, которая на вход принимант трёхзначное число,
+  // а на выходе показывает последнюю цифру этого числа. 
+
+Console.Write("Введите трёхзначное число : ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 99 && num <= 999)
+{
+    Console.Write("Последняя цифра :" + Math.Abs (num) % 10);
+}
+else
+{
+    Console.Write("Введённое число не трёхзначное");
+}
+  
+
+
+
+
+//Задача 8
+   //Check even or odd number (Проверить четное или нечетное число) 
+    
+  
+    // Number which is divisible by 2 is known as Even number   
+    // Number which is not divisible by 2 is known as Odd number 
+    //Число, которое делится на 2, называется четным числом   
+    // Число, которое не делится на 2, называется нечетным числом  
+
+    Console.Write("Enter the number: ");  
+    int number = Convert.ToInt32(Console.ReadLine());  
+    if (number % 2 == 0) // check number after division is zero 
+     // проверочное число после деления равно нулю
+    {                             // четное число
+        Console.Write(number + " is Even Number"); // If divisible by number 
+         // Если делится на число
+    }  
+    else  
+    {                            //нечётное число
+        Console.Write(number + " is Odd number"); // if not divisble by number  
+        // Если не делиться на число
+    }  
+
+
+
+// Задача 9
+ // Prime numbers are numbers divisible by 1 and itself. 
+  // Простые числа — это числа, которые делятся на 1 и на себя. 
+ {
+    Console.Write("Enter the number: ");  
+    int number = Convert.ToInt32(Console.ReadLine());  
+    int i, m = 0, count = 0;  
+    m =  number / 2;                         //число / 2;       
+    for (i = 2; i <= m; i++)            // check number is divisible by any another number  
+                                         // контрольное число делится на любое другое число
+    {  
+        if (number % i == 0)                  // If number is divisible by another number  
+                                             // Если число делится на другое число
+        {  
+            count = 1;                       // reassign the count to 1  
+            break;                              // break the for loop  
+                                                // переназначить счетчик на 1  
+                                                 // прерываем цикл for  
+
+        }  
+    }  
+    if (number > 1 && count == 0)                   // number should be greater than 1.  
+                                                 // число должно быть больше 1.
+    {  
+        Console.Write(number + " is prime number");  // Простое число 
+    }  
+    else  
+    {  
+        Console.Write(number + " is non prime number");  //Не простое число
+    }  
+}    
+
+// Задача 2 Семинар 1
+  // Написать программу, которая на вход принимает два числа 
+  // и выдаёт какое число больше, а какое меньше.
+
+  Console.Write("Enter numberA :");
+  int numberA = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Enter numberB:");
+  int numberB = Convert.ToInt32(Console.ReadLine());
+
+  if (numberA > numberB)
+  {
+     Console.WriteLine("A more B");
+  }  
+  else if (numberA < numberB)   // сочетание: else if является продолжением проверки if.
+  {
+    Console.WriteLine("B more A");
+  }
+else
+{
+    Console.WriteLine(" A equals B");
+}
+
+
+    
