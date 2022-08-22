@@ -153,6 +153,27 @@ Console.WriteLine(array[0]);
 
    );
    Console.WriteLine(max);
+
+   //Задача 3
+   // Поиск максимума из трёх чисел
+
+   Console.WriteLine("Enter first number: ");
+   int number1 = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Enter second number: ");
+   int number2 = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("Enter third number: ");
+   int number3 = Convert.ToInt32(Console.ReadLine());
+
+   int max = number1;
+
+   if (max < number2)
+   max = number2;
+   if (max < number3)
+   max = number3;
+    Console.WriteLine($ "max number = {max}");
+
+
+
    
 / // Задача 4.
 // Напишите программу, которая на вход принимает два числа и проверяет, 
@@ -170,6 +191,29 @@ else
 {
     Console.Write("1 number is not a square of 2 number");
 }
+
+// Задача 4 с дополнением (вывести остаток от деления).
+
+// Написать программу, которая будет на вход принимать два числа 
+// и выводить является одно число кратным друго.
+// Если число не является кратным другому, то выводиться остаток от деления.
+
+Console.WriteLine("Введите первое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+if (num1 % num2 == 0)
+{
+    Console.Write($"кратно");
+}
+else
+{
+    Console.Write($"не кратно, остаток от деления:  {num1 % num2}");
+}
+
+
+
 
 // Задача 5.
 // Напишите программу, которая будет выдавать название дня недели по заданному номеру
@@ -253,7 +297,7 @@ else
     Console.Write("Enter the number: ");  
     int number = Convert.ToInt32(Console.ReadLine());  
     if (number % 2 == 0) // check number after division is zero 
-     // проверочное число после деления равно нулю
+     //если проверочное число после деления равно нулю, то число чётное.
     {                             // четное число
         Console.Write(number + " is Even Number"); // If divisible by number 
          // Если делится на число
@@ -307,7 +351,8 @@ else
   Console.Write("Enter numberB:");
   int numberB = Convert.ToInt32(Console.ReadLine());
 
-  if (numberA > numberB)
+  if (numberA > numberB)   // сравниваем значение двух переменных, 
+                           // если это условие не верное, выполняем проверку else if. 
   {
      Console.WriteLine("A more B");
   }  
@@ -321,12 +366,41 @@ else
 }
 
 
-    //Задача 8: 
+    //Задача 8: вариант 1
 //Напишите программу, которая на вход принимает число (N), 
 //а на выходе показывает все чётные числа от 1 до N.
 int num = 2;
 for (int i=0; i<30; i++)
 {
-    Console.WriteLine(num);
+    Console.WriteLine(num);   
     num = (-(~num)); num = (-(~num)); // побитовое отрицание, всё что "НЕ"
 }
+//Console.Write($"{num},"); получиться в одну строку 2,4,6,и т.д
+
+
+
+//Задача 8 вариант 2
+//Напишите программу, которая на вход принимает число (N), 
+//а на выходе показывает все чётные числа от 1 до N.
+for (int i = 2; i <= 100; i += 2) 
+Console.WriteLine(i);
+
+
+// Задача 8 вариант 3
+// Напишите программу, которая на вход принимает число N, 
+   // а выходе показывает все чётные числа. 
+   // Пользователь вводит любое число и 
+   //программа показыват все чётные числа в этом диапазоне.
+
+   Console.Write("Введите N: ");
+   int N = Convert.ToInt32(Console.ReadLine());
+   int i = 1;
+   while (i <= N)
+   {
+    if (i % 2 == 0)
+   {
+   Console.Write($"{i}");
+   }
+    i ++ ;
+   }
+    Console.WriteLine();
